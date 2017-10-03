@@ -1,0 +1,73 @@
+
+***** O Objetivo do sistema SAAT é controlar a essencia de uma assistência técnica que é a Ordem de Serviços *****
+
+	Ele deve dar ao gerente de operação informações suficientes para que ele possa identificar:
+
+	Performance de Funcionários
+	Atendimentos em pendencia e suas causas
+	Sua Performance através dos prazos de triagem e de troca de peças recebidas que é para ambos os casos de 5 dias
+
+	Estatisticas de defeito
+	Indice de utilização de peças em Garantia e Venda
+	Produtos com atendimento em atrazo para a imediata comunicação ao fornecedor
+	Tempo médio de atendimento imediato e com troca de peças.
+
+***** Caracteristicas técnicas *****
+
+	Sistema totalmente construido em formulários e tabelas HTML
+	Linguagem de programação PHP E JAVASCRIPT
+	Banco de Dados MYSQL
+
+	A escolha da base de dados e das liguanges de programação não passam de uma tentativa empirica de desenvolver um 
+	sistema que não ficasse amarrado a uma plataforma de operação, baixo custo, facilidade de produção funcionalidade 
+	e segurança.
+
+***** Instalação *****
+
+	Após configurar os servidores APACHE e MYSQL o instalador deve:
+
+** Configurar a tabela BASE
+	que vai servir as informações basicas do sistema como
+
+	Nome do administrador
+	Senha do administrador
+	Código da Unidade (filial da empresa)
+	Nome da Filial
+	Endereço da Filial
+	Atendimento exclusivo (se está localizado em um cliente especifico)
+	iventario
+
+** Configurar a tabela RH_CARGO
+	que vai possuir todos os cargos existentes na equipe e seus privilégios no sistema
+	as restrições de acesso aos MENUS DO sistema são definidas nesta tabela
+	ADM
+	ENTRADA
+	PRODUÇÃO
+	CERTIFICAÇÃO
+	SAIDA
+
+
+** Configurar a tabela RH_CONTRATO
+	que vai definir os tipos de contratações feitas pelo rh da empresa
+	a consulta de performance muda em função do tipo de contrato firmado
+	Ex.: um estagiário não pode ser cobrado na mesma medida de um CLT
+	
+*** Configurar a tabela LINHA
+	que vai definiar as linhas atendidas pela equipe
+
+
+***** Manutenção *****
+	O sistema de Back-up ainda está em planejamento
+	E o sistema de restauração de tabelas truncadas está em desenvolvimento
+
+	O iventário paralizará o sistema até que todos os produtos pendentes sejam conferidos e somente após sua 
+	conclusão e atualização da tabela cp é que a operação é liberada.
+	Neste processo todas as ordens pendentes de liberação pelo controle de qualidade são analizadas caso a caso
+	Todas as ordens aguardando analize técnica que não tenham sido lidas são excluidas do sistema e 
+	que aquelas já passaram desta fase deverão ser analizadas. Como um técnico analizou um produto, que não foi 
+	liberado pelo CQ e que não está fisicamente presente nas salas
+	O sistema tambem deve alertar caso hajam OS já finalizadas e encontradas na sala.
+	Uma tabela chamada iventário deve ser criada com cod,cod_colab_confere,data_confere,status,resultado...
+	Um campo adicionado a tab CP cod_iventario
+		
+

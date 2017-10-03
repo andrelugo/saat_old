@@ -1,0 +1,42 @@
+<?
+require_once("sis_valida.php");
+require_once("sis_conn.php");
+if (isset($_POST["cp"])){
+	$cp=$_POST["cp"];
+	$forn=$_POST["forn"];
+	$qt=$_POST["txtQt"];
+	if (!$_POST["cmbDestino"]==""){$destino=$_POST["cmbDestino"];}else{$erro="Destino não preenchido";$destino="";}
+	if (!$_POST["txtCod"]==0){$codPeca=$_POST["txtCod"];}else{$erro="Código da Peça não preenchido!";$codPeca=0;}	
+	if (!$_POST["cmbMotivo"]==0){$motivo=$_POST["cmbMotivo"];}else{$erro="Motivo não preenchido!";$motivo=0;}	
+	if (isset($_POST["txtDescricao"])){$descricao=$_POST["txtDescricao"];}
+}
+$sql=mysql_query("select cod,venda,orcamento,descricao,pre_aprova from peca where cod_fabrica='$codPeca'")or die("Erro no Camando SQL scr_peca.php".mysql_error());
+$row=mysql_num_rows($sql);
+if($row==0){
+	$erro="Peça não encontrada com o código $codPeca";
+}else{
+	$codP=mysql_result($sql,0,"cod");
+	$valor=mysql_result($sql,0,"venda");
+	$orc=mysql_result($sql,0,"orcamento");
+	$preAp=mysql_result($sql,0,"pre_aprova");
+	if ($orc==0){
+		$descPeca=mysql_result($sql,0,"descricao");
+		$erro="A peça $descPeca não está cadastrada como componente estético ou acessório, portanto não pode ser vendida em equipamentos atendidos na garantia. Caso exista algum equivoco no cadastro ou alguma dúvida informe seu gerente!";
+	}
+}
+if (isset($erro)){
+	Header("Location:frm_orcamento.php?destino=$destino&motivo=$motivo&cp=$cp&erro=$erro&codPeca=$codPeca&descricao=$descricao&forn=$forn");
+}else{
+	if ($preAp==1){
+		$sql="insert into orc(cod_peca,cod_cp,qt,cod_colab_cad,data_cad,cod_motivo,valor,cod_destino,cod_decisao,data_decisao,cod_colab_decide)
+		values ('$codP','$cp','$qt',$id,now(),$motivo,'$valor','$destino',1,now(),$id)";
+	}else{
+		$sql="insert into orc(cod_peca,cod_cp,qt,cod_colab_cad,data_cad,cod_motivo,valor,cod_destino)
+		values ('$codP','$cp','$qt',$id,now(),$motivo,'$valor','$destino')";
+	}
+	mysql_db_query ("$bd",$sql,$Link) or die ("Erro na query de inserção dos dados do ORÇAMENTO $sql ".mysql_error());		
+//	$sqlC=mysql_query("update peca set qt=qt-1 where cod = $codP");  // esta query agoa é utilizada no momento da saída do produto
+//	$sqld=mysql_query("update cp set destino=$destino where cod = $codP");
+	Header("Location:frm_orcamento.php?cp=$cp&forn=$forn");
+}
+?>

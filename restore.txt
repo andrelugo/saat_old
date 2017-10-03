@@ -1,0 +1,159 @@
+////
+//Caso a base não exista rode o comando create database ptvcbahia
+////
+**************************************************BKP CASA BAHIA*************************************
+DROP TABLE `bandeira_cbd`, `base`, `cliente`, `cp`, `defeito`, `destino`, `expressao_regular`, `extrato_mo`, `fechamento_reg`, `filial_cbd`, `fornecedor`, `linha`, `modelo`, `mup`, `orc`, `orc_decisao`, `orc_motivo`, `orc_pre_nota`, `os_fornecedor`, `peca`, `peca_defeito`, `peca_servico`, `pedido`, `posicao`, `reprova`, `rh_cargo`, `rh_contrato`, `rh_user`, `solucao`;
+
+RESTORE TABLE base FROM "E:/INFORMATICA/backupAV";# Colunas: 1
+RESTORE TABLE cliente FROM "E:/INFORMATICA/backupAV";# Colunas: 1
+RESTORE TABLE defeito FROM "E:/INFORMATICA/backupAV";# Colunas: 1
+RESTORE TABLE destino FROM "E:/INFORMATICA/backupAV";# Colunas: 1
+RESTORE TABLE fechamento_reg FROM "E:/INFORMATICA/backupAV";# Colunas: 1
+RESTORE TABLE filial_cbd FROM "E:/INFORMATICA/backupAV";# Colunas: 1
+RESTORE TABLE fornecedor FROM "E:/INFORMATICA/backupAV";# Colunas: 1
+RESTORE TABLE linha FROM "E:/INFORMATICA/backupAV";# Colunas: 1
+RESTORE TABLE modelo FROM "E:/INFORMATICA/backupAV";# Colunas: 1
+RESTORE TABLE mup FROM "E:/INFORMATICA/backupAV";# Colunas: 1
+RESTORE TABLE orc FROM "E:/INFORMATICA/backupAV";# Colunas: 1
+RESTORE TABLE orc_decisao FROM "E:/INFORMATICA/backupAV";# Colunas: 1
+RESTORE TABLE orc_motivo FROM "E:/INFORMATICA/backupAV";# Colunas: 1
+RESTORE TABLE orc_pre_nota FROM "E:/INFORMATICA/backupAV";# Colunas: 1
+RESTORE TABLE os_fornecedor FROM "E:/INFORMATICA/backupAV";# Colunas: 1
+RESTORE TABLE peca FROM "E:/INFORMATICA/backupAV";# Colunas: 1
+RESTORE TABLE peca_defeito FROM "E:/INFORMATICA/backupAV";# Colunas: 1
+RESTORE TABLE peca_servico FROM "E:/INFORMATICA/backupAV";# Colunas: 1
+RESTORE TABLE pedido FROM "E:/INFORMATICA/backupAV";# Colunas: 1
+RESTORE TABLE posicao FROM "E:/INFORMATICA/backupAV";# Colunas: 1
+RESTORE TABLE reprova FROM "E:/INFORMATICA/backupAV";# Colunas: 1
+RESTORE TABLE rh_cargo FROM "E:/INFORMATICA/backupAV";# Colunas: 1
+RESTORE TABLE rh_contrato FROM "E:/INFORMATICA/backupAV";# Colunas: 1
+RESTORE TABLE rh_user FROM "E:/INFORMATICA/backupAV";# Colunas: 1
+RESTORE TABLE solucao FROM "E:/INFORMATICA/backupAV";# Colunas: 1
+RESTORE TABLE cp FROM "E:/INFORMATICA/backupAV";# Colunas: 1
+RESTORE TABLE bandeira_cbd FROM "E:/INFORMATICA/backupAV";# Colunas: 1
+RESTORE TABLE extrato_mo FROM "E:/INFORMATICA/backupAV";# Colunas: 1
+RESTORE TABLE expressao_regular FROM "E:/INFORMATICA/backupAV";# Colunas: 1
+
+
+RESTORE TABLE nf_entrada FROM "E:/INFORMATICA/backupAV";# Colunas: 1
+RESTORE TABLE nf_entrada_itens FROM "E:/INFORMATICA/backupAV";# Colunas: 1
+
+
+*********************************************BKP CBD**********************************************
+
+drop TABLE base;
+drop TABLE cliente;
+drop TABLE defeito;
+drop TABLE destino;
+drop TABLE fechamento_reg;
+drop TABLE filial_cbd;
+drop TABLE fornecedor;
+drop TABLE linha;
+drop TABLE modelo;
+drop TABLE mup;
+drop TABLE nf_entrada;
+drop TABLE nf_entrada_itens;
+drop TABLE orc;
+drop TABLE orc_decisao;
+drop TABLE orc_motivo;
+drop TABLE orc_pre_nota;
+drop TABLE os_fornecedor;
+drop TABLE peca;
+drop TABLE peca_defeito;
+drop TABLE peca_servico;
+drop TABLE pedido;
+drop TABLE posicao;
+drop TABLE reprova;
+drop TABLE rh_cargo;
+drop TABLE rh_contrato;
+drop TABLE rh_user;
+drop TABLE solucao;
+drop TABLE cp;
+drop TABLE bandeira_cbd;
+drop TABLE expressao_regular;
+drop TABLE extrato_mo;
+
+RESTORE TABLE base FROM "E:/INFORMATICA/CBD";# Colunas: 1
+RESTORE TABLE cliente FROM "E:/INFORMATICA/CBD";# Colunas: 1
+RESTORE TABLE defeito FROM "E:/INFORMATICA/CBD";# Colunas: 1
+RESTORE TABLE destino FROM "E:/INFORMATICA/CBD";# Colunas: 1
+RESTORE TABLE fechamento_reg FROM "E:/INFORMATICA/CBD";# Colunas: 1
+RESTORE TABLE filial_cbd FROM "E:/INFORMATICA/CBD";# Colunas: 1
+RESTORE TABLE fornecedor FROM "E:/INFORMATICA/CBD";# Colunas: 1
+RESTORE TABLE linha FROM "E:/INFORMATICA/CBD";# Colunas: 1
+RESTORE TABLE modelo FROM "E:/INFORMATICA/CBD";# Colunas: 1
+RESTORE TABLE mup FROM "E:/INFORMATICA/CBD";# Colunas: 1
+RESTORE TABLE orc FROM "E:/INFORMATICA/CBD";# Colunas: 1
+RESTORE TABLE orc_decisao FROM "E:/INFORMATICA/CBD";# Colunas: 1
+RESTORE TABLE orc_motivo FROM "E:/INFORMATICA/CBD";# Colunas: 1
+RESTORE TABLE orc_pre_nota FROM "E:/INFORMATICA/CBD";# Colunas: 1
+RESTORE TABLE os_fornecedor FROM "E:/INFORMATICA/CBD";# Colunas: 1
+RESTORE TABLE peca FROM "E:/INFORMATICA/CBD";# Colunas: 1
+RESTORE TABLE peca_defeito FROM "E:/INFORMATICA/CBD";# Colunas: 1
+RESTORE TABLE peca_servico FROM "E:/INFORMATICA/CBD";# Colunas: 1
+RESTORE TABLE pedido FROM "E:/INFORMATICA/CBD";# Colunas: 1
+RESTORE TABLE posicao FROM "E:/INFORMATICA/CBD";# Colunas: 1
+RESTORE TABLE reprova FROM "E:/INFORMATICA/CBD";# Colunas: 1
+RESTORE TABLE rh_cargo FROM "E:/INFORMATICA/CBD";# Colunas: 1
+RESTORE TABLE rh_contrato FROM "E:/INFORMATICA/CBD";# Colunas: 1
+RESTORE TABLE rh_user FROM "E:/INFORMATICA/CBD";# Colunas: 1
+RESTORE TABLE solucao FROM "E:/INFORMATICA/CBD";# Colunas: 1
+RESTORE TABLE cp FROM "E:/INFORMATICA/CBD";# Colunas: 1
+RESTORE TABLE bandeira_cbd FROM "E:/INFORMATICA/CBD";# Colunas: 1
+RESTORE TABLE extrato_mo FROM "E:/INFORMATICA/CBD";# Colunas: 1
+RESTORE TABLE expressao_regular FROM "E:/INFORMATICA/CBD";# Colunas: 1
+RESTORE TABLE nf_entrada FROM "E:/INFORMATICA/CBD";# Colunas: 1
+RESTORE TABLE nf_entrada_itens FROM "E:/INFORMATICA/CBD";# Colunas: 1	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*********************************************BKP EL**********************************************
+
+
+
+DROP TABLE `bandeira_cbd`, `base`, `cliente`, `cp`, `defeito`, `destino`, `expressao_regular`, `extrato_mo`, `fechamento_reg`, `filial_cbd`, `fornecedor`, `linha`, `modelo`, `mup`, `orc`, `orc_decisao`, `orc_motivo`, `orc_pre_nota`, `os_fornecedor`, `peca`, `peca_defeito`, `peca_servico`, `pedido`, `posicao`, `reprova`, `rh_cargo`, `rh_contrato`, `rh_user`, `solucao`;
+
+RESTORE TABLE base FROM "E:/INFORMATICA/backupEL";# Colunas: 1
+RESTORE TABLE cliente FROM "E:/INFORMATICA/backupEL";# Colunas: 1
+RESTORE TABLE defeito FROM "E:/INFORMATICA/backupEL";# Colunas: 1
+RESTORE TABLE destino FROM "E:/INFORMATICA/backupEL";# Colunas: 1
+RESTORE TABLE fechamento_reg FROM "E:/INFORMATICA/backupEL";# Colunas: 1
+RESTORE TABLE filial_cbd FROM "E:/INFORMATICA/backupEL";# Colunas: 1
+RESTORE TABLE fornecedor FROM "E:/INFORMATICA/backupEL";# Colunas: 1
+RESTORE TABLE linha FROM "E:/INFORMATICA/backupEL";# Colunas: 1
+RESTORE TABLE modelo FROM "E:/INFORMATICA/backupEL";# Colunas: 1
+RESTORE TABLE mup FROM "E:/INFORMATICA/backupEL";# Colunas: 1
+RESTORE TABLE orc FROM "E:/INFORMATICA/backupEL";# Colunas: 1
+RESTORE TABLE orc_decisao FROM "E:/INFORMATICA/backupEL";# Colunas: 1
+RESTORE TABLE orc_motivo FROM "E:/INFORMATICA/backupEL";# Colunas: 1
+RESTORE TABLE orc_pre_nota FROM "E:/INFORMATICA/backupEL";# Colunas: 1
+RESTORE TABLE os_fornecedor FROM "E:/INFORMATICA/backupEL";# Colunas: 1
+RESTORE TABLE peca FROM "E:/INFORMATICA/backupEL";# Colunas: 1
+RESTORE TABLE peca_defeito FROM "E:/INFORMATICA/backupEL";# Colunas: 1
+RESTORE TABLE peca_servico FROM "E:/INFORMATICA/backupEL";# Colunas: 1
+RESTORE TABLE pedido FROM "E:/INFORMATICA/backupEL";# Colunas: 1
+RESTORE TABLE posicao FROM "E:/INFORMATICA/backupEL";# Colunas: 1
+RESTORE TABLE reprova FROM "E:/INFORMATICA/backupEL";# Colunas: 1
+RESTORE TABLE rh_cargo FROM "E:/INFORMATICA/backupEL";# Colunas: 1
+RESTORE TABLE rh_contrato FROM "E:/INFORMATICA/backupEL";# Colunas: 1
+RESTORE TABLE rh_user FROM "E:/INFORMATICA/backupEL";# Colunas: 1
+RESTORE TABLE solucao FROM "E:/INFORMATICA/backupEL";# Colunas: 1
+RESTORE TABLE cp FROM "E:/INFORMATICA/backupEL";# Colunas: 1
+RESTORE TABLE bandeira_cbd FROM "E:/INFORMATICA/backupEL";# Colunas: 1
+RESTORE TABLE extrato_mo FROM "E:/INFORMATICA/backupEL";# Colunas: 1
+RESTORE TABLE expressao_regular FROM "E:/INFORMATICA/backupEL";# Colunas: 1
+
+
+RESTORE TABLE nf_entrada FROM "E:/INFORMATICA/backupEL";# Colunas: 1
+RESTORE TABLE nf_entrada_itens FROM "E:/INFORMATICA/backupEL";# Colunas: 1
