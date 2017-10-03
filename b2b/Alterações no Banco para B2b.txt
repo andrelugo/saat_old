@@ -1,0 +1,13 @@
+DROP TABLE `suser` ;
+
+ALTER TABLE `fornecedor` ADD `login` VARCHAR( 30 ) AFTER `cod` ,
+ADD `senha` VARCHAR( 60 ) AFTER `login` ;
+
+ALTER TABLE `cliente` ADD `revenda` BINARY AFTER `descricao` ;
+
+
+ALTER TABLE `cliente` ADD `estado` VARCHAR( 30 ) AFTER `cep` ;
+
+UPDATE cliente SET revenda =1;
+
+
