@@ -1,0 +1,9 @@
+INSERT INTO `cliente` ( `cod` , `descricao` , `revenda` , `endereco` , `cep` , `estado` , `cidade` , `bairro` , `telefone` , `cpf_cnpj` , `rg_ie` )
+VALUES (
+'', 'Fix Net Com. e Serv. Ltda', '1', 'Rua Eugenio Falk, 368', '04292110', 'SP', 'São Paulo', 'Jardim Previdência', '11-5069.4400', '04.153.665/0001-96', '116.072.460.117'
+);
+
+INSERT INTO `fornecedor` ( `cod` , `login` , `senha` , `nome` , `descricao` , `endereco` , `cep` , `bairro` , `cidade` , `estado` , `contato` , `fone_contato` , `fone_sac` , `fone_tronco` , `fone_financeiro` , `contato_financeiro` , `web` , `e-mail` , `linha` )
+VALUES (
+'', 'fixnet', 'fixnet', 'Fix Net', 'Fix Net Serviços e Comércio LTDA', 'Rua Eugênio Falk, 368', '04292-110', 'Jardim Previdência', 'São Paulo', 'SP', 'Waldney', '5069-4433', NULL , '5069-4400', NULL , 'Adriana', 'www.fixnet.etc.br', 'fixnet@fixnet.etc.br', '1'
+);

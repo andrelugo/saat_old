@@ -1,0 +1,26 @@
+body {
+	background-image: url(img/fundo.gif);
+}
+
+.Titulo1 {
+	font-size: 36px;
+	font-weight: bold;
+}
+.Titulo2 {
+	font-size: 24px;
+	font-weight: bold;
+}
+.Cabeçalho {
+	font-size: 18px;
+	font-weight: bold;
+}
+.caixaPR1 {font-size: 18px}
+.caixaAZ1 {
+	color: #0000FF;
+	font-size: 36px;
+}
+.caixaAZ2 {
+	color: #0000FF;
+	font-size: 24px;
+}
+<!-- //  Isto deve ser copiado entra a TAG HEAD <link href="estilo.css" rel="stylesheet" type="text/css">    -->

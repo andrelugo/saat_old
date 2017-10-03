@@ -1,0 +1,29 @@
+SELECT count( cp.cod ) AS tot, rh_user.nome AS nome
+FROM cp
+INNER JOIN rh_user ON rh_user.cod = cp.cod_tec
+WHERE month( data_sai ) =7
+and year( data_sai ) =2006
+GROUP BY nome
+LIMIT 0 , 30 ;
+
+
+SELECT count( cp.cod ) AS tot, rh_user.nome AS nome
+FROM cp
+INNER JOIN rh_user ON rh_user.cod = cp.cod_cq
+WHERE month( data_sai ) =7
+and year( data_sai ) =2006
+GROUP BY nome
+LIMIT 0 , 30 
+
+
+PRODUÇÃO ADRIANO 2007
+
+SELECT count( cp.cod ) AS tot, rh_user.nome AS nome, modelo.descricao AS modelo
+FROM cp
+INNER JOIN rh_user ON rh_user.cod = cp.cod_tec
+INNER JOIN modelo ON modelo.cod = cp.cod_modelo
+WHERE month( data_sai ) =1
+AND cod_tec =21
+AND year( data_sai ) =2007
+GROUP BY modelo
+LIMIT 0 , 30 
